@@ -11,8 +11,6 @@ for line in f:
         if(sub[1] not in class_count):
             class_count[counter]=sub[1]
             counter+=1
-print("Done")
-print("SYM")
 for iter in range(0,5):
     f=open("/Users/alekhyagumidelli/Documents/csci_544/Homework2/train.pos",'r')
     for line in f:
