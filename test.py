@@ -5,7 +5,6 @@ import operator
 
 class_count=["" for i in range(100)]
 fc=collections.defaultdict(dict)
-ind=collections.defaultdict(dict)
 fin=collections.defaultdict(dict)
 trin=collections.defaultdict(dict)
 counter=1
@@ -28,10 +27,8 @@ for iter in range(0,1):
             sub=word[i].split('/')
             if(sub[0] not in fc):
                 for i in range(0,counter):
-                #fc[sub[0]][class_count[i]]=0
                     fc[sub[0]][class_count[i]]=0
                 fc[sub[0]][sub[1]]=1
-                #ind[sub[0]]=index
                 index+=1
             else:
                 maxi=0
@@ -45,10 +42,6 @@ for iter in range(0,1):
                     fc[sub[0]][sub[1]]+=1
     f.close()
 print(index)
-#r = {}
-#for d1 in ind:
-#    r[ind[d1]]=d1
-#json.dump(fc,open("/Users/alekhyagumidelli/Documents/csci_544/Homework2/pos/model","w"))
 w=csv.writer(open("/Users/alekhyagumidelli/Documents/csci_544/Homework2/pos/model.csv","w"))
 for i in fc:
     maxi=0
