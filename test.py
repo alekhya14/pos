@@ -50,3 +50,7 @@ for i in fc:
             maxi=fc[i][class_count[j]]
             max_class=class_count[j]          
     w.writerow([i,max_class])
+w2=csv.writer(open("/Users/alekhyagumidelli/Documents/csci_544/Homework2/pos/model2.csv","w"))
+for i in fc:
+    for class_c,weight in fc[i].items():
+        w2.writerow([i,class_c,weight])
