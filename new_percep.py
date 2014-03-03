@@ -2,7 +2,7 @@ import collections
 import csv
 import json
 import operator
-
+from math import *
 class_count=["" for i in range(100)]
 fc=collections.defaultdict(dict)
 sorted_fc=collections.defaultdict(dict)
@@ -73,9 +73,11 @@ for line in f:
         if(sum_class[j]>maxi):
             maxi=sum_class[j]
             result=class_count[j]
+#    print "%s:%s"%(word[4],result) for final test data which works, just change the format.
     if(result==word[0]):
         correct+=1
     else:
         wrong+=1
 print correct
 print wrong
+temp=float(correct)/float(correct+wrong)
